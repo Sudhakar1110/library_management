@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "loan_period_days",
+  "fine_per_day",
+  "column_break_1",
+  "max_books_per_member",
+  "allow_renewal",
+  "section_break_notifications",
+  "send_overdue_reminders",
+  "reminder_days_before_due"
+ ],
+ "fields": [
+  {
+   "fieldname": "loan_period_days",
+   "fieldtype": "Int",
+   "label": "Loan Period (Days)",
+   "default": "14",
+   "reqd": 1,
+   "description": "Number of days a member can keep a book before it is overdue."
+  },
+  {
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine Per Day",
+   "default": "5",
+   "reqd": 1,
+   "description": "Fine charged per overdue day in default currency."
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_books_per_member",
+   "fieldtype": "Int",
+   "label": "Max Books Per Member",
+   "default": "3",
+   "reqd": 1,
+   "description": "Maximum number of books a member can have issued at one time."
+  },
+  {
+   "fieldname": "allow_renewal",
+   "fieldtype": "Check",
+   "label": "Allow Renewal",
+   "default": "1",
+   "description": "Whether members can renew an existing loan."
+  },
+  {
+   "fieldname": "section_break_notifications",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "fieldname": "send_overdue_reminders",
+   "fieldtype": "Check",
+   "label": "Send Overdue Reminders",
+   "default": "1"
+  },
+  {
+   "fieldname": "reminder_days_before_due",
+   "fieldtype": "Int",
+   "label": "Reminder Days Before Due Date",
+   "default": "2",
+   "depends_on": "send_overdue_reminders"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Library Management",
+ "name": "Library Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Librarian"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,96 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"lib-shortcuts\",\"type\":\"shortcut\"},{\"id\":\"lib-cards\",\"type\":\"card\"}]",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "is_hidden": 0,
+ "label": "Library Management",
+ "links": [
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Books",
+   "link_count": 0,
+   "link_to": "Book",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Members",
+   "link_count": 0,
+   "link_to": "Library Member",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Transactions",
+   "link_count": 0,
+   "link_to": "Book Transaction",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Settings",
+   "link_count": 0,
+   "link_to": "Library Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Overdue Books Report",
+   "link_count": 0,
+   "link_to": "Overdue Books Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-01-01 00:00:00.000000",
+ "module": "Library Management",
+ "name": "Library Management",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "roles": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "format": "{} Books",
+   "label": "Books",
+   "link_to": "Book",
+   "stats_filter": "{ \"available_copies\": [\">\" , 0] }",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "format": "{} Members",
+   "label": "Active Members",
+   "link_to": "Library Member",
+   "stats_filter": "{ \"status\": \"Active\" }",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "label": "Overdue Books",
+   "link_to": "Overdue Books Report",
+   "type": "Report"
+  }
+ ]
+}
